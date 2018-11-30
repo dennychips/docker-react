@@ -7,3 +7,10 @@ before_install:
 
 script:
   - docker run denipermana/docker-react yarn test --coverage
+
+deploy:
+  provider: heroku
+  api_key: 
+    secure: $HEROKU_API_KEY
+  on:
+  branch: master
